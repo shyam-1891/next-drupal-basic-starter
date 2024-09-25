@@ -9,5 +9,5 @@ export const drupal = new NextDrupal(baseUrl, {
     clientId,
     clientSecret,
   },
-  // debug: true,
+  debug: true,
 })

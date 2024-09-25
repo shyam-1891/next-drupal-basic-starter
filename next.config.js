@@ -1,13 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   images: {
     remotePatterns: [
       {
-        // protocol: 'https',
+        protocol: "https",
         hostname: process.env.NEXT_IMAGE_DOMAIN,
-        // port: '',
-        // pathname: '/sites/default/files/**',
+        port: "",
+        pathname: "/sites/default/files/**",
       },
     ],
   },

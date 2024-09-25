@@ -32,6 +32,16 @@ async function getNode(slug: string[]) {
     params.include = "field_image,uid"
   }
 
+  // if (type === "node--page") {
+  //   params.include =
+  //     "field_components,uid,field_components.field_image_text_img,field_components.field_image_media,field_components.field_accordion_items"
+  // }
+
+  if (type === "node--page") {
+    params.include =
+      "field_components,uid,field_hero,field_hero.field_image.field_media_image,field_components.field_accordion_items"
+  }
+
   const resource = await drupal.getResource<DrupalNode>(type, uuid, {
     params,
   })
